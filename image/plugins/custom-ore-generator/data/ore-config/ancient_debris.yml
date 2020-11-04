@@ -1,0 +1,22 @@
+# Only edit this file if you 10000% sure you know what you are doing. 
+# You can set everything via the plugin commands, no need to edit this file manully.
+value:
+  ==: CustomOreGenerator#OreConfig
+  name: ancient_debris
+  material: ANCIENT_DEBRIS
+  ore-generator: VANILLA_MINABLE_GENERATOR
+  block-selector: COUNT_RANGE
+  activated: true
+  generated-all: true
+  replace-materials:
+  - STONE
+  ore-generator-settings:
+    ==: CustomOreGenerator#OreSettingsContainer
+    ore-settings:
+      VEIN_SIZE: 3.5
+  block-selector-settings:
+    ==: CustomOreGenerator#OreSettingsContainer
+    ore-settings:
+      VEINS_PER_CHUNK: 2.0
+      MINIMUM_HEIGHT: 0.0
+      HEIGHT_RANGE: 32.0

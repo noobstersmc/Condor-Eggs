@@ -1,0 +1,415 @@
+ore-config:
+  factory:
+    success: '&2The ore-config was created successfully'
+    canceled: '&cThe ore-config creating was canceled'
+    command-blocked:
+    - ' '
+    - '&cWhile you are creating an ore-config you can not use any command!'
+    gui:
+      general:
+        next: Next
+        previous: Previous
+        menu: Menu
+        abort: Abort
+        back: Back
+      menu:
+        name: Menu
+        ready: Click to create the ore-config
+        not-ready: Not available at the moment
+        status:
+          present: 'Status: &r&aPresent'
+          needed: 'Status: &r&cNeeded'
+          not-present-not-needed: 'Status: &r&eNeeded &r(&dOptional&r)'
+          not-set-able: 'Status: &r&eNot set able at the moment'
+        step:
+          name: 'Step: Name'
+          material: 'Step: Material'
+          replace-material: 'Step: Replace Material'
+          select-material: 'Step: Select Material'
+          ore-generator: 'Step: Ore Generator'
+          block-selector: 'Step: Block Selector'
+          biome: 'Step: Biome'
+          ore-generator-ore-setting: 'Step: Ore Generator Ore Setting'
+          block-selector-ore-setting: 'Step: Block Selector Ore Setting'
+          custom-data: 'Step: Custom Data'
+          world: 'Step: World'
+      ore-generator:
+        name: Select a Ore-Generator
+        default-ore-generator: Default Ore Generator
+        ore-generator:
+          name: 'Name: &r%display-name%'
+          description: 'Description: &r%description%'
+      block-selector:
+        name: Select a Block-Selector
+        default-block-selector: Default Ore Selector
+        block-selector:
+          name: 'Name: &r%display-name%'
+          description: 'Description: &r%description%'
+      biome:
+        name: Select Biomes
+      ore-settings:
+        name: Set Settings
+      ore-setting:
+        name: Set the Setting
+        lore: 'Current value: %value%'
+      custom-datas:
+        name: Select Custom Datas
+      custom-data:
+        name: Change the Custom Data
+        set: Set a new Custom Data value
+        found: Click to set the found Custom Data
+        current: The currently set value
+        value: 'value: %value%'
+        remove: Remove the custom data
+        set-value:
+          STRING:
+            begin: '&2Type the value (String) of your custom data in the chat'
+            not-valid: '&cThe value %value% can not apply to the custom data, try
+              again!'
+          INTEGER:
+            begin: '&2Type the value (Integer) of your custom data in the chat'
+            not-valid: '&cThe value %value% can not apply to the custom data, try
+              again!'
+          DOUBLE:
+            begin: '&2Type the value (Double) of your custom data in the chat'
+            not-valid: '&cThe value %value% can not apply to the custom data, try
+              again!'
+          BOOLEAN:
+            begin: '&2Type the value (Boolean) of your custom data in the chat'
+            not-valid: '&cThe value %value% can not apply to the custom data, try
+              again!'
+      boolean:
+        name: Select true or false
+        'true': 'true'
+        'false': 'false'
+      world:
+        name: Select World
+    name:
+      text: '&2Type a Name for your ore-config in the chat, the name can only contains
+        the letter &da&f-&dz &dA&f-&dZ &d0&f-&d9 &d- &2and &d_&2                     &2Type
+        &r''&d!exit&r''&2 to go back to normal game play                          &2Type
+        &r''&d!menu&r''&2 to go to the ore-config creating menu'
+      invalid: '&cThe name &r''&d%value%&r'' &cis not valid, try again!'
+      already-exists: '&4The Ore-Config &f''&d%ore-config%&f'' &4already exists!'
+      success:
+      - ' '
+      - '&2You choosed the name &r''&d%value%&r'''
+    material:
+      text: '&2Left Click on the Block you want to generated                     &2Type
+        &r''&d!exit&r''&2 to go back to normal game play                          &2Type
+        &r''&d!menu&r''&2 to go to the ore-config creating menu'
+      set:
+      - ' '
+      - '&2You selected the material &r''&d%material%&r''&2, to change the material
+        simple left click another one'
+      - '&2To continue type &r''&d!next&r'''
+    replace-material:
+      text: '&2Left Click the Block''s you want to get replaced with the new one                                                                          &2Type
+        &r''&d!exit&r''&2 to go back to normal game play                          &2Type
+        &r''&d!menu&r''&2 to go to the ore-config creating menu'
+      add:
+      - ' '
+      - '&2You &aadded &r''&d%material%&r''&2 to the replace materials'
+      - '&2To &cremove&2 it from the list &dshift&2 + &dleftclick &2the block again'
+      - '&2To continue type &r''&d!next&r'''
+      already-add:
+      - ' '
+      - '&r''&d%material%&r''&c is already added to the replace material list'
+      remove:
+      - ' '
+      - '&2You have &cremoved &r''&d%material%&r''&2 from the replace materials'
+      not-add:
+      - ' '
+      - '&cThe material &r''&d%material%&r''&c is not added as replace material'
+    select-material:
+      text: '&2Left Click the Block''s you want as select material                 &2This
+        step is optional type ''&d!next&r''&2 to skip this part                  &2Type
+        &r''&d!exit&r''&2 to go back to normal game play                          &2Type
+        &r''&d!menu&r''&2 to go to the ore-config creating menu'
+      add:
+      - ' '
+      - '&2You &aadded &r''&d%material%&r''&2 to the select materials'
+      - '&2To &cremove&2 it from the list &dshift&2 + &dleftclick &2the block again'
+      - '&2To continue type &r''&d!next&r'''
+      already-add:
+      - ' '
+      - '&r''&d%material%&r''&c is already added to the select material list'
+      remove:
+      - ' '
+      - '&2You have &cremoved &r''&d%material%&r''&2 from the select materials'
+      not-add:
+      - ' '
+      - '&cThe material &r''&d%material%&r''&c is not added as select material'
+info:
+  block-selector:
+    COUNT_RANGE:
+      display-name: Count Range
+      description: Minecraft's Block Selector for ores
+      ore-setting:
+        HEIGHT_RANGE:
+          display-name: Height Range
+          description: The Range in which the vein gets generated
+        MINIMUM_HEIGHT:
+          display-name: Minimum Height
+          description: The minimum Height in which the vein gets generated
+        VEINS_PER_CHUNK:
+          display-name: Veins Per Chunk
+          description: The amount of tries to generate a vein, per chunk
+    HIGHEST_BLOCK:
+      display-name: Highest Block
+      description: Selects the highest Air block on a random x and z location
+      ore-setting:
+        VEINS_PER_CHUNK:
+          display-name: Veins Per Chunk
+          description: The amount of tries to generate a vein, per chunk
+  ore-generator:
+    GLOW_STONE_GENERATOR:
+      display-name: Glow Stone Generator
+      description: Minecraft's generator for generation glowstone
+      ore-setting:
+        CONNECTIONS:
+          display-name: Connections
+          description: //TODO add explanation
+        HORIZONTAL_SCOPE:
+          display-name: Horizontal Scope
+          description: How much the blocks should spread in x and z
+        NEGATIVE_TRIES:
+          display-name: Negative Tries
+          description: How high from the first block it should generate down
+        NEGATIVE_VERTICAL_SCOPE:
+          display-name: Negative Vertical Scope
+          description: How often it should try to generated a block
+        POSITIVE_TRIES:
+          display-name: Positive Tries
+          description: How high from the first block it should generate up
+        POSITIVE_VERTICAL_SCOPE:
+          display-name: Positive Vertical Scope
+          description: How often it should try to generated a block
+    SINGLE_ORE_GENERATOR:
+      display-name: Single Ore Generator
+      description: Generate a single block on the given location
+    VANILLA_MINABLE_GENERATOR:
+      display-name: Vanilla Minable Generator
+      description: Minecraft's generator for ores
+      ore-setting:
+        VEIN_SIZE:
+          display-name: Vein Size
+          description: The maximum size of the vein
+    ROOT_GENERATOR:
+      display-name: Root Generator
+      description: A generator which is based on root growth
+      ore-setting:
+        CHANCE_SUBTRACTION_RANGE:
+          display-name: Change Subtraction Range
+          description: The range from which the Continue Change is additionally shortened
+        CONTINUE_CHANCE:
+          display-name: Continue Change
+          description: The chance, that a new root is created
+        CONTINUE_TRIES:
+          display-name: Continue Tries
+          description: How often it tries, per block, to continue
+        DOWN_CHANCE:
+          display-name: Down Change
+          description: The chance, that a root is going down
+        LENGTH_SUBTRACTION_RANGE:
+          display-name: Length Subtraction Range
+          description: The range from which, the Root Length is additionally shortened
+        MINIMUM_CHANCE_SUBTRACTION:
+          display-name: Minimum Change Subtraction
+          description: How much from the Continue Change gets subtracted minimum
+        MINIMUM_LENGTH_SUBTRACTION:
+          display-name: Minimum Length Subtraction
+          description: How much from the Root Length gets subtracted minimum
+        MINIMUM_TRIES_SUBTRACTION:
+          display-name: Minimum Tries Subtraction
+          description: How much from the Continue Tries gets subtracted minimum
+        ROOT_LENGTH:
+          display-name: Root Length
+          description: The length of a individuate root
+        TRIES_SUBTRACTION_RANGE:
+          display-name: Tries Subtraction Range
+          description: The range from which the Continue Tries is additionally shortened
+  custom-data:
+    AUTO:
+      display-name: Auto
+      description: Allows you to set a command block to auto mode
+    BLOCK_STATE:
+      display-name: Block State
+      description: Allows you to set different block states to a block
+    COMMAND:
+      display-name: Command
+      description: Allows you to add a command to a command block
+    DOWN:
+      display-name: Down
+      description: Correspond to the 'down' block state
+    EAST:
+      display-name: East
+      description: Correspond to the 'east' block state
+    FACING:
+      display-name: Facing
+      description: Correspond to the 'facing' block state
+    ITEM_MODS:
+      display-name: Item Mods
+      description: Add support for the plugin ItemMods
+    NBT_TAG:
+      display-name: NBT Tag
+      description: Allows you to add NBT Tags to tile entity
+    NORTH:
+      display-name: North
+      description: Correspond to the 'north' block state
+    SKULL_TEXTURE:
+      display-name: Skull Texture
+      description: Allows you to add custom textures to a skull
+    SOUTH:
+      display-name: South
+      description: Correspond to the 'south' block state
+    TICK_BLOCK:
+      display-name: Tick Block
+      description: Allow you to let the block get a block update after the generation
+    UP:
+      display-name: Up
+      description: Correspond to the 'up' block state
+    VARIANT:
+      display-name: Variant
+      description: Correspond to the 'variant' block state
+    WEST:
+      display-name: West
+      description: Correspond to the 'west' block state
+command:
+  world-not-found: '&4The world &f''&d%world%&f'' &4does not exist!'
+  ore-generator-not-found: '&4The ore generator &f''&d%ore-generator%&f'' &4does not
+    exist!'
+  block-selector-not-found: '&4The block selector &f''&d%block-selector%&f'' &4does
+    not exist!'
+  material-not-found: '&4The material &f''&d%material%&f'' &4does not exist!'
+  material-no-block: '&4The material &f''&d%material%&f'' &4is not a block!'
+  ore-config-not-found: '&4The ore config &f''&d%ore-config%&f'' &4does not exist!'
+  biome-not-found: '&4The biome &f''&d%biome%&f'' &4does not exist!'
+  create:
+    usage: '&f/&doregen create <&dname&f> <&dmaterial&f> [<&dore-generator&f>] [<&dblock-selector&f>]'
+    description: Creates a new Ore-Config, in which you can set values
+    not-enough-args:
+    - '&4Wrong amount of arguments!'
+    - '&cuse %%translation:[command.create.usage]%'
+    already-exists: '&4The Ore-Config &f''&d%ore-config%&f'' &4already exists!'
+    name-not-valid:
+    - '&4The name &f''&d%ore-config%&f'' &4is not valid!'
+    - '&4Only the characters &da&f-&dz &dA&f-&dZ &d0&f-&d9 &d- &d_ &4are allowed'
+    ore-generator-not-specified: '&6Ore generator not specified use default one: &f''&d%ore-generator%&f'''
+    block-selector-not-specified: '&6Block selector not specified use default one:
+      &f''&d%block-selector%&f'''
+    success: '&aThe ore config &f''&d%ore-config%&f''&a, was successfully created,
+      with the material &f''&d%material%&f''&a, ore generator &f''&d%ore-generator%&f''&a
+      and block selector &f''&d%block-selector%&f'''
+  set:
+    usage: '&f/&doregen set &f<&dsubcommand&f>'
+    description: Main command for different 'set' subcommands
+    value:
+      usage: '&f/&doregen set value &f<&dsubcommand&f>'
+      description: Main command for different 'set value' subcommands
+      ore-generator:
+        usage: '&f/&doregen set value ore-generator <&dore-config&f> <&dsetting&f>
+          <&damount&f>'
+        description: Set a ore generator setting value to the ore config
+        not-enough-args:
+        - '&4Wrong amount of arguments!'
+        - '&cuse %%translation:[command.set.value.ore-generator.usage]%'
+        setting-not-found: '&4The setting &f''&d%setting%&f'' &4does not exist!'
+        setting-not-valid: '&4The setting &f''&d%setting%&f'' &4is not valid with
+          the ore generator &f''&d%ore-generator%&f''&4!'
+        value-not-valid: '&f''&d%value%&f'' &4is not a valid number!'
+        success: '&aThe value has been updated successfully!'
+      block-selector:
+        usage: '&f/&doregen set value block-selector <&dore-config&f> <&dsetting&f>
+          <&damount&f>'
+        description: Set a block-selector setting value to the ore config
+        not-enough-args:
+        - '&4Wrong amount of arguments!'
+        - '&cuse %%translation:[command.set.value.block-selector.usage]%'
+        setting-not-found: '&4The setting &f''&d%setting%&f'' &4does not exist!'
+        setting-not-valid: '&4The setting &f''&d%setting%&f'' &4is not valid with
+          the block selector &f''&d%block-selector%&f''&4!'
+        value-not-valid: '&f''&d%value%&f'' &4is not a valid number!'
+        success: '&aThe value has been updated successfully!'
+      help:
+        usage: '&f/&doregen set value help &f(<&dsubcommand&f>)'
+    customdata:
+      usage: '&f/&doregen set customdata <&dore-config&f> <&dcustomdata&f> <&dvalue&f>'
+      description: Set a custom data to the ore config
+      not-enough-args:
+      - '&4Wrong amount of arguments!'
+      - '&cuse %%translation:[command.set.customdata.usage]%'
+      not-found: '&4The custom data &f''&d%customdata%&f'' &4does not exist!'
+      ore-config-not-valid: '&4The custom data &f''&d%customdata%&f'' &4can not be
+        applied to the ore config &f''&d%ore-config%&f''&4!'
+      value-not-valid: '&f''&d%value%&f'' &4is not a valid custom data!'
+      success: '&aThe custom data was set successfully!'
+    biome:
+      usage: '&f/&doregen set biome <&dore-config&f> <&dbiome&f> &d...'
+      description: Set the biomes in which the ore should be generate. You can set
+        multiple Biomes, by separate them with a space. Biomes that are already set
+        to the ore config, gets override.
+      not-enough-args:
+      - '&4Wrong amount of arguments!'
+      - '&cuse %%translation:[command.set.biome.usage]%'
+      success: '&aThe biomes are set successfully!'
+    replace-material:
+      usage: '&f/&doregen set replacematerial <&dore-config&f> <&dmaterial&f> &d...'
+      description: Set the material on which the ore should be generate. You can set
+        multiple Materials, by separate them with a space. Materials that are already
+        set to the ore config, gets override.
+      not-enough-args:
+      - '&4Wrong amount of arguments!'
+      - '&cuse %%translation:[command.set.replacmaterial.usage]%'
+      success: '&aThe materials are set successfully!'
+    select-material:
+      usage: '&f/&doregen set selectmaterial <&dore-config&f> <&dmaterial&f> &d...'
+      description: 'Set the material which should be the start point for generation.
+        You can set multiple Materials, by separate them with a space. Materials that
+        are already set to the ore config, gets override. If no select Material is
+        set, the replace material will be use instead '
+      not-enough-args:
+      - '&4Wrong amount of arguments!'
+      - '&cuse %%translation:[command.set.selectmaterial.usage]%'
+      success: '&aThe materials are set successfully!'
+    position:
+      usage: '&f/&doregen set position <&dworld&f> <&dore-config&f> <&dposition&f>'
+      description: Change the order in which the Ore Config's should get generated
+      not-enough-args:
+      - '&4Wrong amount of arguments!'
+      - '&cuse %%translation:[command.set.position.usage]%'
+      value-not-valid: '&f''&d%value%&f'' &4is not a valid number!'
+      success: '&aThe position was change successfully!'
+    help:
+      usage: '&f/&doregen set help &f(<&dsubcommand&f>)'
+  add:
+    usage: '&f/&doregen add &f<&dsubcommand&f>'
+    description: Main command for different 'add' subcommands
+    ore-config:
+      usage: '&f/&doregen add ore-config <&dworld&f> <&dore-config&f> [<&dposition&f>]'
+      description: Add a Ore-Config to a world
+      not-enough-args:
+      - '&4Wrong amount of arguments!'
+      - '&cuse %%translation:[command.add.ore-config.usage]%'
+      value-not-valid: '&f''&d%value%&f'' &4is not a valid number!'
+      present: '&4The Ore-Config &f''&d%ore-config%&f'' &4 is already present in the
+        world!'
+      success: '&aThe Ore-Config was add successfully!'
+    help:
+      usage: '&f/&doregen add help &f(<&dsubcommand&f>)'
+  reload:
+    usage: '&f/&9oregen reload'
+    description: Reload the Plugin
+    begin: '&aBegin with the reload!'
+    end: '&aReload finish!'
+  help:
+    usage: '&f/&doregen help &f(<&dsubcommand&f>)'
+    description: Displays all commands and if a subcommand is specified, more details
+      are displayed
+    header-format: ~~~~~~~~~~~~~~~~~~~&9Commands&f~~~~~~~~~~~~~~~~~~~
+    footer-format: ~~~~~~~~~~~~~~~~~~~&9Commands&f~~~~~~~~~~~~~~~~~~~
+    separator-format: '  '
+    permission-format: '-> &9permission&f: %permission%'
+    description-format: '-> &9description&f: %description%'
+    usage-format: '&9usage&f: %usage%'
+    short-format: '&9%command%&f: %description%'

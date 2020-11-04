@@ -1,0 +1,31 @@
+# This file is machine generated, please use the in game commands and gui to change values. 
+# Modifying this file per hand on your own risk.
+value:
+  ==: OreControl#WorldOreConfig
+  name: world
+  ore-settings:
+  - ==: OreControl#OreSettings
+    settings:
+      HEIGHT_RANGE: 32.0
+      VEINS_PER_CHUNK: 8.0
+    ore: DIAMOND
+  - ==: OreControl#OreSettings
+    settings:
+      VEINS_PER_CHUNK: 7.0
+    ore: LAPIS
+  - ==: OreControl#OreSettings
+    settings:
+      VEINS_PER_CHUNK: 7.0
+    ore: GOLD
+  - ==: OreControl#OreSettings
+    settings:
+      ORES_PER_CHUNK_RANGE: 16.0
+    ore: EMERALD
+  - ==: OreControl#OreSettings
+    settings:
+      VEINS_PER_CHUNK: 10.0
+    ore: REDSTONE
+  - ==: OreControl#OreSettings
+    settings:
+      VEINS_PER_CHUNK: 22.0
+    ore: IRON

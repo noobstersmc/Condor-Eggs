@@ -1,0 +1,7 @@
+# Only edit this file if you 10000% sure you know what you are doing. 
+# You can set everything via the plugin commands, no need to edit this file manully.
+value:
+  ==: CustomOreGenerator#WorldConfig
+  name: world
+  ore-config:
+  - ancient_debris

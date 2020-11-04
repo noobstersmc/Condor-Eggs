@@ -1,0 +1,6 @@
+# This file is machine generated, please use the in game commands and gui to change values. 
+# Modifying this file per hand on your own risk.
+value:
+  ==: OreControl#WorldOreConfig
+  name: Default
+  template: true
