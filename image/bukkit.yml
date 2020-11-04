@@ -11,7 +11,7 @@
 # Forums: https://www.spigotmc.org/
 # Bug tracker: https://www.spigotmc.org/go/bugs
 settings:
-  allow-end: false
+  allow-end: true
   warn-on-overload: true
   permissions-file: permissions.yml
   update-folder: update
