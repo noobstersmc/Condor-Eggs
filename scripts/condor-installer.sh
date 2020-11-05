@@ -22,7 +22,7 @@ get_os() {
 }
 log() {
     echo "[Logger] $1"
-    echo $1 >>./install.log
+    echo "[Logger] $1" >>./install.log
 }
 get_dependencies() {
     #Check the OS
