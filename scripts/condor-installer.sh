@@ -11,15 +11,15 @@ LOCATION_ID=$2
 get_os() {
     if [[ "$OS" == \"Ubuntu* ]]; then
         OS=apt
-        echo "[Logger] Running Ubuntu with $OS"
+        log "Running Ubuntu with $OS"
     elif [[ "$OS" == \"Debian* ]]; then
         OS=apt
-        echo "[Logger] Running Debian with $OS"
+        log "Running Debian with $OS"
     elif [[ "$OS" == \"Centos* ]]; then
         OS=yum
-        echo "[Logger] Running Centos/Red Hat with $OS"
+        log "Running Centos/Red Hat with $OS"
     else
-        echo "[Error] Not compatible with $OS"
+        log "[Error] Not compatible with $OS"
         exit -1
     fi
 }
@@ -34,11 +34,11 @@ get_dependencies() {
     if [[ "$OS" == "apt" ]]; then
         # check for curl
         if ! [ -x "$(command -v curl)" ]; then
-            echo "* curl is required in order for this script to work."
+            log "* curl is required in order for this script to work."
             apt install curl -y
         fi
         if ! [ -x "$(command -v jq)" ]; then
-            echo "* jq is required in order for this script to work."
+            log "* jq is required in order for this script to work."
             apt install jq -y
         fi
 
@@ -53,7 +53,8 @@ install_docker() {
     if ! [ -x "$(command -v docker)" ]; then
         log "Installing docker"
         curl -fsSL https://get.docker.com -o get-docker.sh
-        sh get-docker.sh
+        log "Coso docker"
+        sh ./get-docker.sh
     else
         log "Docker is already installed!"
     fi
