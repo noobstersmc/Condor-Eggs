@@ -13,6 +13,9 @@ get_os() {
         OS=apt
         echo "[Logger] Running Ubuntu with $OS"
     elif [[ "$OS" == \"Debian* ]]; then
+        OS=apt
+        echo "[Logger] Running Debian with $OS"
+    elif [[ "$OS" == \"Centos* ]]; then
         OS=yum
         echo "[Logger] Running Centos/Red Hat with $OS"
     else
