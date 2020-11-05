@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 #Set the variable for the os empty for now
-PTERO_API_KEY="YFnjYiSUMSJWfwKTGnIKdrenPP5Beflb70XWrNSKWqUIfMur"
+PTERO_API_KEY="FYMUQIEAK3b8kuSWuybqYFD20NKWqga3XjdFWBcz3ogAhbbW"
 OS=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
 IP=""
 RAM=$(free -m | grep "Mem" | awk '{print $2}')
