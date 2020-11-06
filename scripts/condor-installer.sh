@@ -113,5 +113,11 @@ self_configure_wings
 #Finished instalation
 log "Finished installation"
 discord_log "[$PROVIDER] Installation finished. Restarting $IP"
-#Reboot
+#Add a swap
+dd if=/dev/zero of=/swaphynix bs=1024 count=1048576
+mkswap /swaphynix
+swapon /swaphynix
+#Save in the fstab
+echo "/swaphynix              swap                    swap    defaults        0 0" >> /etc/fstab
+#Enable docker
 sudo systemctl enable docker --now
