@@ -114,5 +114,4 @@ self_configure_wings
 log "Finished installation"
 discord_log "[$PROVIDER] Installation finished. Restarting $IP"
 #Reboot
-sudo systemctl enable docker
-sudo reboot now
+sudo systemctl enable docker --now
