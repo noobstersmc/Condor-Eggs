@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 #Set the variable for the os empty for now
-PTERO_API_KEY="FYMUQIEAK3b8kuSWuybqYFD20NKWqga3XjdFWBcz3ogAhbbW"
+PTERO_API_KEY="pSMkBRPFJRxgsjzIXiHm6fuNqerVMQQQE6UOXb4BiVs8fio7"
 OS=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
 IP=""
 RAM=$(free -m | grep "Mem" | awk '{print $2}')
@@ -84,10 +84,14 @@ install_wings() {
     log "Wings has been installed and will start automatically in the next reboot"
 }
 self_configure_wings() {
-    log "Configuring wings..."
-    echo " "
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/InfinityZ25/scripts/main/condor/wings/self-install.sh)" " " $PTERO_API_KEY "$PROVIDER-$IP" $LOCATION_ID $IP $RAM
-    echo " "
+    eval $(
+        curl "http://condor.jcedeno.us:420/self-register" \
+        -H 'Accept: application/json' \
+        -H 'Content-Type: application/json' \
+        -H "auth:  Condor-Secreto" \
+        -X GET \
+        -d "{\"ip\": \"$IP\"}" | jq -r '.command'
+    )
 }
 
 #Entry Point of the installer
@@ -121,3 +125,4 @@ swapon /swaphynix
 echo "/swaphynix              swap                    swap    defaults        0 0" >> /etc/fstab
 #Enable docker
 sudo systemctl enable docker --now
+sudo systemctl enable wings --now
