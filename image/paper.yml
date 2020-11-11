@@ -189,4 +189,4 @@ world-settings:
     squid-spawn-height:
       maximum: 63.0
     viewdistances:
-      no-tick-view-distance: 16
+      no-tick-view-distance: 12
