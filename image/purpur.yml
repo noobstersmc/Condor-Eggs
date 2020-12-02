@@ -84,7 +84,7 @@ world-settings:
         deactivate-by-redstone: false
       bed:
         explode: true
-        explosion-power: 5.0
+        explosion-power: 3.0
         explosion-fire: true
         explosion-effect: DESTROY
       turtle_egg:
