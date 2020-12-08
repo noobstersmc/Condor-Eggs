@@ -73,7 +73,7 @@ world-settings:
       no-tick: []
       respawn_anchor:
         explode: true
-        explosion-power: 5.0
+        explosion-power: 3.0
         explosion-fire: true
         explosion-effect: DESTROY
       anvil:
