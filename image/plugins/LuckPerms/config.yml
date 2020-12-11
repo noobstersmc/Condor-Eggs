@@ -227,7 +227,7 @@ watch-files: true
 messaging-service: auto
 
 # If LuckPerms should automatically push updates after a change has been made with a command.
-auto-push-updates: true
+auto-push-updates: false
 
 # If LuckPerms should push logging entries to connected servers via the messaging service.
 push-log-entries: true
@@ -551,7 +551,7 @@ enable-ops: true
 #   will be de-opped unless they have the permission node, and the op/deop commands will be
 #   disabled.
 # - It is recommended that you use this option instead of assigning a single '*' permission.
-auto-op: false
+auto-op: true
 
 # Defines if "opped" players should be able to use all LuckPerms commands by default.
 #
