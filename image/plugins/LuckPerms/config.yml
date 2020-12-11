@@ -176,7 +176,7 @@ split-storage:
 
 
 
-
+auto-push-updates: false
 # +----------------------------------------------------------------------------------------------+ #
 # |                                                                                              | #
 # |                            UPDATE PROPAGATION & MESSAGING SERVICE                            | #
@@ -227,7 +227,7 @@ watch-files: true
 messaging-service: auto
 
 # If LuckPerms should automatically push updates after a change has been made with a command.
-auto-push-updates: false
+auto-push-updates: true
 
 # If LuckPerms should push logging entries to connected servers via the messaging service.
 push-log-entries: true
