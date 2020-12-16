@@ -224,7 +224,7 @@ watch-files: true
 #   => redis     Uses Redis pub-sub to push changes. Your server connection info must be configured
 #                below.
 #   => auto      Attempts to automatically setup a messaging service using redis or sql.
-messaging-service: auto
+messaging-service: redis
 
 # If LuckPerms should automatically push updates after a change has been made with a command.
 auto-push-updates: true
@@ -242,9 +242,9 @@ broadcast-received-log-entries: true
 # Settings for Redis.
 # Port 6379 is used by default; set address to "host:port" if differs
 redis:
-  enabled: false
-  address: localhost
-  password: ''
+  enabled: true
+  address: "redis-11764.c73.us-east-1-2.ec2.cloud.redislabs.com:11764"
+  password: 'Gxb1D0sbt3VoyvICOQKC8IwakpVdWegW'
 
 
 
