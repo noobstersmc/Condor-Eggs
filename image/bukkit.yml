@@ -36,3 +36,6 @@ ticks-per:
   monster-spawns: 4
   autosave: 6000
 aliases: now-in-commands.yml
+worlds:
+  lobby:
+    generator: VoidGenerator:THE_VOID
