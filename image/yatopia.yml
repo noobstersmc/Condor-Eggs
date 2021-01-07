@@ -4,24 +4,38 @@
 
 verbose: false
 brand-name: Hynix
-allow-player-item-duplication: false
-allow-ridable-chestable-duping: false
-allow-sand-duping: false
 config-version: 1
 settings:
+  using-floodgate: false
+  fire-block-physics-event: true
   pistonPushLimit: 12
-  fixFallDistance: true #Default false
-  itemStuckSleepTicks: 15 #Default value: 1
+  fixFallDistance: true
+  itemStuckSleepTicks: 15
   disableEntityStuckChecks: false
   villager:
     simplerVillagerBehavior: false
     villagersHideAtNight: false
+  checks:
+    flight: true
+    vehicle-flight: true
+    moved-quickly: true
+    moved-wrongly: true
+    vehicle-moved-quickly: true
+    vehicle-moved-wrongly: true
+  intervals:
+    player-time-statistics: 1
+  criterion-triggers:
+    location: true
+    enter-block: true
+    tick: true
+  tick:
+    enchanting-tables: false
 worlds:
   default:
     tick-empty-hoppers: true
     disable-observer-clocks: false
     fast-feature-search-dont-load: false
-    use-block-distance-in-portal-search-radius: true #Default value false
+    use-block-distance-in-portal-search-radius: true
     collisions:
       players: true
       animals: true
@@ -38,6 +52,3 @@ worlds:
       full-hopper-cooldown: 128
     pigmen:
       dont-target-unless-hit: false
-world-settings:
-  default:
-    allow-dragon-exp-duping: false

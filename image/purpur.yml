@@ -9,19 +9,23 @@
 # Wiki: https://github.com/pl3xgaming/Purpur/wiki 
 
 verbose: false
-config-version: 4
+config-version: 10
 settings:
   tps-catchup: true
-  fix-item-position-desync: true #if set to true fix MC-4
+  fix-item-position-desync: true
   use-alternate-keepalive: false
   dont-send-useless-entity-packets: true
-  lagging-threshold: 18.0 #Default value: 19.0; 18 is to keep the vanilla behaviour of villagers "longer"
+  lagging-threshold: 18.0
   blocks:
     barrel:
       six-rows: false
     ender_chest:
       six-rows: false
       use-permissions-for-rows: false
+  enchantment:
+    allow-infinity-and-mending-together: false
+  logger:
+    hex-color-support-in-console: true
 world-settings:
   default:
     mobs:
@@ -39,7 +43,7 @@ world-settings:
         jump-height: 1.0
         max-health: 100.0
         movement-speed: 0.5
-        attack-damage: 50.0 #set it to 26 if the difficulty is 'easy'; 50 for 'normal' and 75 for 'hard' [source: minecraft-gamepedia]
+        attack-damage: 50.0
         have-ai: false
         have-hostile-ai: false
       fox:
@@ -63,6 +67,7 @@ world-settings:
       dolphin:
         disable-treasure-searching: false
       squid:
+        water-offset-check: 0.0
         immune-to-EAR: true
       villager:
         brain-ticks: 1
@@ -77,7 +82,7 @@ world-settings:
         explosion-fire: true
         explosion-effect: DESTROY
       anvil:
-        allow-colors: false
+        allow-colors: true
       farmland:
         gets-moist-from-below: false
       spawner:
@@ -91,7 +96,42 @@ world-settings:
         break-from-exp-orbs: false
         break-from-items: false
         break-from-minecarts: false
+      sign:
+        allow-colors: false
+        right-click-edit: false
+      bamboo:
+        max-height: 16
+        small-height: 10
+      twisting_vines:
+        growth-modifier: 0.1
+      weeping_vines:
+        growth-modifier: 0.1
+      lava:
+        infinite-source: false
+        infinite-required-sources: 2
+        speed:
+          nether: 10
+          not-nether: 30
     gameplay-mechanics:
-      save-projectiles-to-disk: false #Default value: true; false is better for your storage and the loading process of the chunk
+      persistent-tileentity-display-names-and-lore: false
       milk-cures-bad-omen: true
       entity-lifespan: 0
+      projectile-despawn-rates:
+        dragon_fireball: -1
+        egg: -1
+        ender_pearl: -1
+        experience_bottle: -1
+        firework_rocket: -1
+        fishing_bobber: -1
+        fireball: -1
+        llama_spit: -1
+        potion: -1
+        shulker_bullet: -1
+        small_fireball: -1
+        snowball: -1
+        wither_skull: -1
+      infinity-bow:
+        normal-arrows: true
+        spectral-arrows: false
+        tipped-arrows: false
+        no-arrows: false

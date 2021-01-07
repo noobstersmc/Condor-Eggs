@@ -19,3 +19,13 @@ world-settings:
   world_nether: {}
   world_the_end: {}
   lobby: {}
+packet-limiter:
+  kick-message: '&cSent too many packets'
+  limits:
+    all:
+      interval: 7.0
+      max-packet-rate: 500.0
+    PacketPlayInAutoRecipe:
+      interval: 4.0
+      max-packet-rate: 5.0
+      action: DROP

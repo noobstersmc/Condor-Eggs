@@ -10,7 +10,10 @@
 #    (If this means nothing to you, just go to https://www.spigotmc.org/go/irc )
 # Forums: https://www.spigotmc.org/
 # Bug tracker: https://www.spigotmc.org/go/bugs
+
+
 settings:
+  minimum-api: none
   allow-end: false
   warn-on-overload: true
   permissions-file: permissions.yml
@@ -21,10 +24,10 @@ settings:
   deprecated-verbose: default
   shutdown-message: Thanks for playing!
 spawn-limits:
-  water-ambient: 5
+  water-ambient: 3
   monsters: 10
-  animals: 20
-  water-animals: 5
+  animals: 10
+  water-animals: 3
   ambient: 1
 chunk-gc:
   period-in-ticks: 100

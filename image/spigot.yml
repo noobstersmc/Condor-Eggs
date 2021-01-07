@@ -33,9 +33,9 @@ settings:
     attackDamage:
       max: 2048.0
 messages:
-  whitelist: Whitelist ON. Visit noobsters.net
+  whitelist: Whitelist ON
   unknown-command: Unknown command. Type "/help" for help.
-  server-full: The server is full! Visit noobsters.net
+  server-full: The server is full! Upgrade Your Rank
   outdated-client: Outdated client! Please use {0}
   outdated-server: Outdated server! I'm still on {0}
   restart: Server is restarting
@@ -113,17 +113,17 @@ world-settings:
       sweetberry-modifier: 100
       kelp-modifier: 100
     entity-activation-range:
-      animals: 16 #Default value: 32
-      monsters: 24 #Default value: 32
+      animals: 16
+      monsters: 24
       raiders: 48
-      misc: 8 #Default value: 16
+      misc: 8
       water: 16
       villagers: 32
       flying-monsters: 32
       villagers-work-immunity-after: 100
       villagers-work-immunity-for: 20
       villagers-active-for-panic: true
-      tick-inactive-villagers: false #Default value: true
+      tick-inactive-villagers: false
       wake-up-inactive:
         animals-max-per-tick: 4
         animals-every: 1200
@@ -161,3 +161,5 @@ world-settings:
       min: 45.0
   worldeditregentempworld:
     verbose: false
+players:
+  disable-saving: false
