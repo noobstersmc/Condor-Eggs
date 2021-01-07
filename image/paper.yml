@@ -183,7 +183,7 @@ world-settings:
       - emerald_ore
       - ender_chest
       replacement-blocks:
-      - coal_ore
+      - stone
     generator-settings:
       flat-bedrock: false
     squid-spawn-height:
