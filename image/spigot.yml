@@ -4,7 +4,6 @@ world-settings:
   default:
     mob-spawn-range: 3
     arrow-despawn-rate: 300
-    nerf-spawner-mobs: true
     enable-zombie-pigmen-portal-spawns: false
     merge-radius:
       item: 4.0
