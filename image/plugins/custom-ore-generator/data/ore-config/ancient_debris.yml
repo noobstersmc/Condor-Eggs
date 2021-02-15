@@ -17,6 +17,6 @@ value:
   block-selector-settings:
     ==: CustomOreGenerator#OreSettingsContainer
     ore-settings:
-      VEINS_PER_CHUNK: 2.0
+      VEINS_PER_CHUNK: 4.0
       MINIMUM_HEIGHT: 0.0
       HEIGHT_RANGE: 32.0
